@@ -5,7 +5,7 @@ Python is a dynamically typed, object oriented programming language.
 import random
 
 # Set a random value to guess
-rnge_values = random.randint(1, 10)
+rnge_values = random.randint(1, 6)
 rnge = rnge_values
 
 # Get input value 

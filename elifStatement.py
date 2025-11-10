@@ -14,3 +14,4 @@ for i in range(1, 101):
         print("Buzz") # if i is divisible by 5 prints "Buzz"
     else:
         print(i) # when i is not divisible by either prints integer in range
+
