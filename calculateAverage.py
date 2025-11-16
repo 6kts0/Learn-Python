@@ -9,7 +9,7 @@ Faba Kouyate, Fall 2025
 
 def average_calculator():
 
-    numsum = 0
+    numsum = 0 # Initialized numsum to 0 to activate the loop
 
     while True:
 
@@ -31,7 +31,7 @@ def average_calculator():
             num3_int = int(num3)
 
             # Calculate sum of all numbers and assign to a variable
-            numsum = num1_int + num2_int + num3_int
+            numsum = num1_int + num2_int + num3_int                                                                                   
 
             # Calculate average of both inputted numbers (sum of all numbers / total amount of numbers)
             average = float(numsum / 3)
