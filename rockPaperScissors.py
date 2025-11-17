@@ -22,9 +22,9 @@ def rock_paper_scissors():
             print("+-" * 25)
 
             player_choice = input(str("Enter your play: ")).lower()
-            compute_choice = random.choice(elements) # Computers choice will be a random word within elements
+            compute_choice = random.choice(elements).lower() # Computers choice will be a random word within elements
 
-            # Rejects any input that isnt within the list of choices 
+            # Rejects any input value that isnt within the elements variable 
             if player_choice not in elements:
                 raise ValueError("Invalid entry")
 
@@ -41,7 +41,7 @@ def rock_paper_scissors():
                 print("\nSam Altman has taken the W... and your data.")
             elif compute_choice == 'paper' and player_choice == 'paper':
                 print("\nTie!")
-            elif compute_choice == 'paper' and player_choice == 'Scissors':
+            elif compute_choice == 'paper' and player_choice == 'scissors':
                 print("\nYou beat the computer!")
             
             # If computer picks scissors this code block runs
