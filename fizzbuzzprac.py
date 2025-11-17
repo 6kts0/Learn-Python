@@ -1,31 +1,30 @@
 """ 
-Functionally coded fizzbuzz problem solution
-    * Acknowledge the order of operations necessary for this function to return properly
-    * 
+**Functionally coded fizzbuzz problem solution**
+ORDER OF OPERATIONS MUST BE OBEYED
 """
 
-# Start with defining a function with a parameter to acknowledge
-def fizz_buzz():
-    # Define a variable to hold "string" input
-    str_user_input = input('Enter an integer between 1 and 101: ')
-
-    # Convert input to integer
-    integized_input = int(str_user_input)
-
-    # Repeat request for smaller integer if input is above 100
+# Function starts
+def fizzbuzz():
+    # Added input method to define range
+    strt_v = input("Enter a start value for a range: ")
+    stp_v = input("Enter a stop value for your range: ")
     
-    # Setup variables to hold fizz and buzz requirement
-    fizz = integized_input % 3 == 0
-    buzz = integized_input % 5 == 0
+    # Convert inputs to integers 
+    start_value = int(strt_v)
+    stop_value = int(stp_v)
 
-    # if, elif, else, operation outputs 
-    if fizz and buzz:
-        print('FizzBuzz')
-    elif fizz:    
-        print('Fizz')
-    elif buzz:
-        print('Buzz')
-    else:
-        print(integized_input)
+    for i in range(start_value, stop_value):
 
-fizz_buzz()
+        # Pre-defined fizz and buzz (I ADDED THAT HYPHEN!!)
+        fizz = i % 3 == 0
+        buzz = i % 5 == 0
+
+        if fizz and buzz:
+            print("FizzBuzz")
+        elif fizz:
+            print("Fizz")
+        elif buzz:
+            print("Buzz")
+        else:
+            print(i)
+fizzbuzz()
