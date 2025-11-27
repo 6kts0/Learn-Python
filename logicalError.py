@@ -7,5 +7,5 @@ average  = total / count
 print(f"Average is: {average}")
 
 # LOGICAL ERROR 2
-for i in range(1, 5):
+for i in range(1, 11):
     print(i)

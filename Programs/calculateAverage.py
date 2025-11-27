@@ -24,15 +24,12 @@ def average_calculator():
             num1 = input("Enter any number: ")
             num2 = input("Enter a second number: ")
             num3 = input("Enter a third number: ")
-                
             # Convert inputs to integers
             num1_int = int(num1)
             num2_int = int(num2)
             num3_int = int(num3)
-
             # Calculate sum of all numbers and assign to a variable
             numsum = num1_int + num2_int + num3_int                                                                                   
-
             # Calculate average of both inputted numbers (sum of all numbers / total amount of numbers)
             average = float(numsum / 3)
 

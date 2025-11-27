@@ -232,7 +232,9 @@ def delete_student_data():
             verify_deletion = input(f"Type 'yes' to delete the record associated with {delete_id} or press ENTER to exit: ").strip()
             if verify_deletion.lower() == 'yes':
                 student_ppi = student_ppi[student_ppi['Student ID'] != delete_id]
+                print("-" * 60) 
                 print("*RECORD DELETED*")
+                print("-" * 60) 
             elif verify_deletion.lower() != 'yes':
                 return
             
