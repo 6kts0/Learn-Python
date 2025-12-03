@@ -16,7 +16,7 @@ def fizzbuzz():
     for i in range(start_value, stop_value):
         time.sleep(0.5) # Delete this to print range instantly
 
-        # Pre-defined fizz and buzz (I ADDED THAT HYPHEN!!)
+        # Pre-defined fizz and buzz (I added that hyphen)
         fizz = i % 3 == 0
         buzz = i % 5 == 0
 
