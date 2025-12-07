@@ -35,7 +35,7 @@ with open('prac.csv', 'w', newline='') as f:
         file_write.writerow(row)
 
 with open('prac.csv') as f:
-    file_read = csv.reader(f, delimiter=';')
+    file_read = csv.reader(f, delimiter=';', dialect='excel')
     for row in file_read:
         print(row)
         print('-' * 80)
