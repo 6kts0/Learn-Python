@@ -1,7 +1,8 @@
 """
 Traversing Binary Trees
 ------------------------------
-Depth First Search
+Recursive Pre Order
+NODE > LEFT > RIGHT
 """
 #    1
 #  2   3
