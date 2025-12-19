@@ -13,7 +13,8 @@ processed_text = text.upper()
 counts = Counter(processed_text)
 
 # Sum the counts for all vowels
-vowel_count = sum(counts.get(vowel, 0) for vowel in vowels)
+for vowel in vowels:
+    vowel_count = sum(counts.get(vowel, 0))
 
 # Print total vowels counted in vowel_count 
 print(f"The total vowel count is: {vowel_count}")
