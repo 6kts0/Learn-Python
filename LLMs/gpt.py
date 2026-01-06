@@ -1,3 +1,7 @@
+"""
+Initialize a .env file to hide your API key
+"""
+
 from openai import OpenAI
 
 API_KEY = 'your-key'
