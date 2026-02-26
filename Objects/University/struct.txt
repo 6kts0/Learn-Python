@@ -1,0 +1,9 @@
+GENERAL OBJECT FLOW/STRUCTURE
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+| employee, department, manager |
+/////////////////////////////////
+
+-- employee = eID, name, dob, salary, title, deptID
+-- department = deptID, name, location
+-- manager = eID, deptID
