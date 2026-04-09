@@ -4,7 +4,7 @@ VEHICLE INVENTORY MANAGER
 
 """
 --ADDITIONS TO IMPLEMENT--
-DISCLAIMER: company/genre is used because I may place the Ford inventory in a broader category for the user to view from (e.g. United States, Japan, Austrailia, etc.)
+DISCLAIMER: Company/genre is used because I may place the Ford inventory in a broader category for the user to view from (e.g. United States, Japan, Austrailia, etc.)
 
 * Utilize one function to hold all ford vehicle classes and objects created so far **1
 * Brainstorm some tasteful vehicle companies and genres to add **2
@@ -50,7 +50,6 @@ class styleCoupe():
 
     # Print a formatted spec row for coupe vehicle inventory
     def CPE(self):
-        print("| Model | Year | MSRP | Engine | Gearbox | Power (WHP) |")
         print('|', self.name, '|', self.year, '|', currency.get_money_with_currency_format(self.msrp), '|', self.engine, '|', self.gearbox, '|', self.power )
         print('-' * 100)
 
@@ -65,11 +64,13 @@ fordMach1 = styleCoupe('Ford Mustang Mach-1', 2021, '57,945', '5.0L V8 TT', '6-S
 def viewCoupe_inv():
     coupeCat = input("Would you like to see our inventory (Yes/No): ").lower().strip()
     if coupeCat == 'yes':
-        print('=' * 80)
+        print('=' * 100)
         print('\n')
         print('Coupe - IN STOCK')
         print('\n')
-        print('=' * 80)
+        print('=' * 100)
+        print("| MODEL | YEAR | MSRP | ENGINE | GEARBOX | POWER (WHP) |")
+        print('=' * 100)
         fordMach1.CPE()
         fordCap.CPE()
         fordMach1.CPE()
@@ -90,7 +91,6 @@ class styleSport():
 
     # Print a formatted spec row for sport vehicle inventory
     def SPT(self):
-        print("| Model | Year | MSRP | Engine | Gearbox | Power (WHP) |")
         print('|', self.name, '|', self.year, '|', currency.get_money_with_currency_format(self.msrp), '|', self.engine, '|', self.gearbox, '|', self.power)
         print('-' * 100)
 
@@ -106,11 +106,13 @@ fordFrs = styleSport('Ford Focus RS', 2018, '34,990', '2.3L I4 Turbo', '6-Speed 
 def viewSport_inv():
     sportCat = input("Would you like to see our inventory (Yes/No): ").lower().strip()
     if sportCat == 'yes':
-        print('=' * 80)
+        print('=' * 100)
         print('\n')
         print("Sport - IN STOCK")
         print('\n')
-        print('=' * 80)
+        print('=' * 100)
+        print("| MODEL | YEAR | MSRP | ENGINE | GEARBOX | POWER (WHP) |")
+        print('=' * 100)
         fordMshlby.SPT()
         fordFrs.SPT()
         fordPrbe.SPT()
@@ -150,7 +152,7 @@ def viewSuv_inv():
         print("SUV - IN STOCK")
         print('\n')
         print('=' * 100)
-        print("| Model | Year | MSRP | Engine | Gearbox | Power (WHP) |")
+        print("| MODEL | YEAR | MSRP | ENGINE | GEARBOX | POWER (WHP) |")
         print('=' * 100)
         fordKuga.SUV()
         fordExpd.SUV()
@@ -174,7 +176,6 @@ class styleTruck():
         print('|', self.name, '|', self.year, '|', currency.get_money_with_currency_format(self.msrp), '|', self.engine, '|', self.gearbox, '|', self.power)
         print('-' * 100)
 
-
 # Truck inventory
 fordRapt = styleTruck('Ford F-150 Raptor SVT', 2010, '41,995', '6.2L V8', '6-Speed Automatic', 411)
 fordRang = styleTruck('Ford Ranger Double Cab', 2019, '30,300', '2.3L EcoBoost', '10-Speed Automatic', 270)
@@ -191,7 +192,7 @@ def viewTruck_inv():
         print("Trucks - IN STOCK")
         print('\n')
         print('=' * 100)
-        print("| Model | Year | MSRP | Engine | Gearbox | Power (WHP) |")
+        print("| MODEL | YEAR | MSRP | ENGINE | GEARBOX | POWER (WHP) |")
         print('=' * 100)
         fordRapt.TRK()
         fordRang.TRK()
@@ -203,6 +204,7 @@ def viewTruck_inv():
 
 # Shows vehicle class menu and displays chosen category details and/or inventory
 def readFord():
+    print('=' * 80)
     print("-- VEHICLE CLASS TYPES --")
     print('=' * 80)
     print("| Coupe | Sport | SUV | Truck | Off-Road | Track |")
@@ -234,8 +236,10 @@ def readFord():
         print('=' * 80)
         viewTruck_inv()
     elif view_class == 'offroad' or view_class == 'off-road':
+        print('| Class Name | Class ID')
         offroad.CLS()
     elif view_class == 'track':
+        print('| Class Name | Class ID')
         track.CLS()
 
 readFord()
